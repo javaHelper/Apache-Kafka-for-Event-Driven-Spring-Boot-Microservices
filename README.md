@@ -92,3 +92,26 @@ Created topic topic1.
 @Prateeks-MBP ~ % kafka-topics --create --topic topic2 --partitions 3 --replication-factor 3 --bootstrap-server localhost:9092,localhost:9094
 Created topic topic2.
 ```
+
+# List all topics
+
+```
+% kafka-topics --list --bootstrap-server localhost:9092
+topic1
+topic2
+```
+
+# Describe 
+
+```
+% kafka-topics --describe --bootstrap-server localhost:9092
+Topic: topic1	TopicId: RAl7vy8aQSatGI2JCVSiwg	PartitionCount: 3	ReplicationFactor: 3	Configs: 
+	Topic: topic1	Partition: 0	Leader: 2	Replicas: 2,3,1	Isr: 2,3,1	Offline: 
+	Topic: topic1	Partition: 1	Leader: 3	Replicas: 3,1,2	Isr: 3,1,2	Offline: 
+	Topic: topic1	Partition: 2	Leader: 1	Replicas: 1,2,3	Isr: 1,2,3	Offline: 
+Topic: topic2	TopicId: UjkqeZs5Qa2VhXqBBpnfUA	PartitionCount: 3	ReplicationFactor: 3	Configs: 
+	Topic: topic2	Partition: 0	Leader: 1	Replicas: 1,2,3	Isr: 1,2,3	Offline: 
+	Topic: topic2	Partition: 1	Leader: 2	Replicas: 2,3,1	Isr: 2,3,1	Offline: 
+	Topic: topic2	Partition: 2	Leader: 3	Replicas: 3,1,2	Isr: 3,1,2	Offline: 
+
+```
