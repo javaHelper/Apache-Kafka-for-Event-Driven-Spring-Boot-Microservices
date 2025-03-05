@@ -216,5 +216,39 @@ lastName
 age
 
 ```
+----------------
 
+```
+kafka-topics --create --topic messages-order --partitions 3 --replication-factor 3 --bootstrap-server localhost:9092
+Created topic messages-order.
+```
 
+```
+kafka-console-producer --topic messages-order --bootstrap-server localhost:9092 --property "parse.key=true" --property "key.separator=:"
+>1:First Message
+>2:Second Message
+>3:Third Message
+>4:Fourth Message
+>5:Fifth Message
+>a:a
+>b:B
+>c:c
+>d:d
+
+```
+
+```
+kafka-console-consumer --bootstrap-server localhost:9092 --topic messages-order --property "parse.key=true" --property "key.separator=:" --from-beginning --property print.key=true
+1:First Message
+1:Second Message
+1:Third Message
+1:Fourth Message
+1:Sixth Message
+a:a
+b:b
+c:c
+d:d
+e:e
+f:f
+
+```
