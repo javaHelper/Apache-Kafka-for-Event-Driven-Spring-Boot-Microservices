@@ -197,3 +197,24 @@ lastName	Ninawe
 age	40
 
 ```
+
+# Hide value and print key only
+
+```
+kafka-console-consumer --bootstrap-server localhost:9092 --topic my-topic --property print.key=true --property print.value=false --from-beginning
+null
+null
+firstName
+lastName
+age
+Hello
+Spring
+firstName
+lastName
+firstName
+lastName
+age
+
+```
+
+
