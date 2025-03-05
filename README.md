@@ -125,4 +125,13 @@ Topic: topic2	TopicId: UjkqeZs5Qa2VhXqBBpnfUA	PartitionCount: 3	ReplicationFacto
 topic1
 ```
 
+# Produce Messages
+
+```
+kafka-console-producer --bootstrap-server localhost:9092,localhost:9094 --topic my-topic
+>Hello World
+[2025-03-05 11:00:24,344] WARN [Producer clientId=console-producer] Error while fetching metadata with correlation id 8 : {my-topic=UNKNOWN_TOPIC_OR_PARTITION} (org.apache.kafka.clients.NetworkClient)
+>Hello world 2
+>    
+```
 
