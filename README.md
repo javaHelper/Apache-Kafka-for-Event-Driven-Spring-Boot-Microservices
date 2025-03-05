@@ -135,3 +135,33 @@ kafka-console-producer --bootstrap-server localhost:9092,localhost:9094 --topic 
 >    
 ```
 
+# Produce Message with key
+
+```
+@Prateeks-MBP ~ % kafka-console-producer --bootstrap-server localhost:9092,localhost:9094 --topic my-topic --property "parse.key=true" --property "key.separator=:"
+>firstName:Prateek
+>lastName:Ninawe
+>age:38
+>
+```
+
+----------
+
+# Consume Message
+
+If you spin up multiple consumers, all the consumer (shell) will get the message messages, if you have 4 consumers all consumer will get all messages. 
+
+```
+@Prateeks-MBP ~ % kafka-console-consumer --topic my-topic --from-beginning --bootstrap-server localhost:9092
+Hello World
+Hello world 2
+Prateek
+Ninawe
+38
+
+```
+
+
+# 
+
+
