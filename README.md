@@ -1,9 +1,9 @@
 # Apache-Kafka-for-Event-Driven-Spring-Boot-Microservices
 
 
-docker-compose.yml
+docker-compose -f docker-compose.yml --env-file environment.env up
 
-```
+```json
 version: "3.8"
 services:
   kafka-1:
