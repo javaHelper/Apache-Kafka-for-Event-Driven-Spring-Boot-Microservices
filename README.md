@@ -162,6 +162,19 @@ Ninawe
 ```
 
 
-# 
+# Consume key-value pair messages
 
+```
+kafka-console-producer --bootstrap-server localhost:9092,localhost:9094 --topic my-topic --property "parse.key=true" --property "key.separator=:"
+>firstName:shrutika
+>lastName:Ninawe
+>age:40
+>
+```
 
+```
+kafka-console-consumer --bootstrap-server localhost:9092 --topic my-topic --property print.key=true
+firstName	shrutika
+lastName	Ninawe
+age	40
+```
