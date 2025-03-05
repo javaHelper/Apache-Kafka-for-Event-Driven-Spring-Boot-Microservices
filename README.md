@@ -115,3 +115,14 @@ Topic: topic2	TopicId: UjkqeZs5Qa2VhXqBBpnfUA	PartitionCount: 3	ReplicationFacto
 	Topic: topic2	Partition: 2	Leader: 3	Replicas: 3,1,2	Isr: 3,1,2	Offline: 
 
 ```
+
+# Delete Topic
+
+```sh
+@Prateeks-MBP ~ % kafka-topics --delete --topic topic2 --bootstrap-server localhost:9092
+
+@Prateeks-MBP ~ % kafka-topics --list --bootstrap-server localhost:9092             
+topic1
+```
+
+
