@@ -178,3 +178,22 @@ firstName	shrutika
 lastName	Ninawe
 age	40
 ```
+
+# How to print both key & value?
+
+```
+kafka-console-consumer --bootstrap-server localhost:9092 --topic my-topic --property print.key=true --property print.value=true --from-beginning
+null	Hello World
+null	Hello world 2
+firstName	Prateek
+lastName	Ninawe
+age	38
+Hello	World
+Spring	Action
+firstName	Shrutika
+lastName	Ninawe
+firstName	shrutika
+lastName	Ninawe
+age	40
+
+```
