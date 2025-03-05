@@ -3,7 +3,7 @@
 
 docker-compose -f docker-compose.yml --env-file environment.env up
 
-```json
+```sh
 version: "3.8"
 services:
   kafka-1:
