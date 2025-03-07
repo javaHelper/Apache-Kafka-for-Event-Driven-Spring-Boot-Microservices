@@ -43,3 +43,6 @@ Deposite Service
 ```
 
 Even Kafka Topics will have all the data, haven't captured it.
+
+# Bring the mockservice down and test it
+
