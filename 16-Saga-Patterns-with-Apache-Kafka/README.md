@@ -22,7 +22,7 @@ curl --location 'http://localhost:8081/products' \
 ```
 
 
-```
+```shell
 curl --location 'http://localhost:8080/orders' \
 --header 'Content-Type: application/json' \
 --data '{
