@@ -72,3 +72,24 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic payments-events
 kafka-console-consumer --bootstrap-server localhost:9092 --topic orders-commands --from-beginning
 {"orderId":"af8b67cb-769b-4148-99bf-e67b22f8a784"}
 ```
+
+```
+curl --location 'http://localhost:8080/orders/be31fac8-8b9b-4cef-af01-bbed00bc499a/history'
+```
+
+```json
+[
+    {
+        "id": "3072b4fe-6529-4ec3-8b97-ca5f310ab995",
+        "orderId": "be31fac8-8b9b-4cef-af01-bbed00bc499a",
+        "status": "CREATED",
+        "createdAt": "2025-03-08T17:01:35.813+00:00"
+    },
+    {
+        "id": "6bdfe9df-8d3d-4306-ae8d-adbe4b078110",
+        "orderId": "be31fac8-8b9b-4cef-af01-bbed00bc499a",
+        "status": "APPROVED",
+        "createdAt": "2025-03-08T17:01:37.098+00:00"
+    }
+]
+```
