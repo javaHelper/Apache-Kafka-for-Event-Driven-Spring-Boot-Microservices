@@ -47,3 +47,28 @@ kafka-console-consumer --bootstrap-server localhost:9092 --topic orders-events -
 {"orderId":"af8b67cb-769b-4148-99bf-e67b22f8a784","customerId":"3751f8f8-9a19-476e-80d7-b1be72babf21","productId":"92049e90-0c8b-4b5c-8042-737eab04002f","productQuantity":1}
 {"orderId":"af8b67cb-769b-4148-99bf-e67b22f8a784"}
 ```
+
+```
+kafka-console-consumer --bootstrap-server localhost:9092 --topic products-commands --from-beginning
+{"productId":"92049e90-0c8b-4b5c-8042-737eab04002f","productQuantity":1,"orderId":"af8b67cb-769b-4148-99bf-e67b22f8a784"}
+```
+
+```
+afka-console-consumer --bootstrap-server localhost:9092 --topic products-events --from-beginning
+{"orderId":"af8b67cb-769b-4148-99bf-e67b22f8a784","productId":"92049e90-0c8b-4b5c-8042-737eab04002f","productPrice":1500.00,"productQuantity":1}
+```
+
+```
+kafka-console-consumer --bootstrap-server localhost:9092 --topic payments-commands --from-beginning
+{"orderId":"af8b67cb-769b-4148-99bf-e67b22f8a784","productId":"92049e90-0c8b-4b5c-8042-737eab04002f","productPrice":1500.00,"productQuantity":1}
+```
+
+```
+kafka-console-consumer --bootstrap-server localhost:9092 --topic payments-events --from-beginning
+{"orderId":"af8b67cb-769b-4148-99bf-e67b22f8a784","paymentId":"5e660c5d-a67a-41f7-afc9-a082673b9686"}
+```
+
+```
+kafka-console-consumer --bootstrap-server localhost:9092 --topic orders-commands --from-beginning
+{"orderId":"af8b67cb-769b-4148-99bf-e67b22f8a784"}
+```
