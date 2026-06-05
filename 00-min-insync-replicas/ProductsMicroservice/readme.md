@@ -78,6 +78,7 @@ Now hope is code still works
 
 ![Screenshot 2025-03-05 at 10.18.28 PM.png](../../Desktop/Screenshot%202025-03-05%20at%2010.18.28%E2%80%AFPM.png)
 
+
 Case-2: Stop one more server, only 1 server is up and expectation is that code should fail
 
 code will keep doing retry for 
