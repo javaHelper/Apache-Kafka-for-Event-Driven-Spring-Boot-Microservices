@@ -2,16 +2,27 @@
 
 ````sh
 kafka-topics --create --topic products-created-events-topic --partitions 3 --replication-factor 3 --bootstrap-server localhost:9092
-Created topic products-created-events-topic.
 ````
+Response
+
+```
+Created topic products-created-events-topic.
+```
+
 
 ````
 kafka-topics --describe --topic products-created-events-topic --bootstrap-server localhost:9092
+````
+
+Response
+```
 Topic: products-created-events-topic	TopicId: XCPJxhVbRsG8nfJbcytHDg	PartitionCount: 3	ReplicationFactor: 3	Configs: 
 Topic: products-created-events-topic	Partition: 0	Leader: 1	Replicas: 1,2,3	Isr: 1,2,3	Offline: 
 Topic: products-created-events-topic	Partition: 1	Leader: 2	Replicas: 2,3,1	Isr: 2,3,1	Offline: 
 Topic: products-created-events-topic	Partition: 2	Leader: 3	Replicas: 3,1,2	Isr: 3,1,2	Offline:
-````
+```
+
+
 
 ````shell
 curl --location 'http://localhost:62885/products' \
